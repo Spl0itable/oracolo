@@ -113,6 +113,7 @@
     <div class="content">
       {@html renderedContent}
     </div>
+<zap-threads anchor=""/>
   </div>
 {:else}
   <p>Loading...</p>
