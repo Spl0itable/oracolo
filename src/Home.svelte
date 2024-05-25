@@ -41,7 +41,7 @@
         {
           kinds: [30023],
           authors: [publicKey],
-          limit: 10,
+          limit: 20,
         }
       ],
       {
@@ -90,12 +90,12 @@
       <!-- svelte-ignore a11y-missing-attribute -->
       <img src="{picture}" />
     </div>
-    {name}
+    Trust Me Bro | Blog
   </h1>
 </div>
 
 <div class="about">
-  {about}
+  Commentary around Privacy, Security, and Anonymity in the modern age.
 </div>
 
 {#if events.length > 0}

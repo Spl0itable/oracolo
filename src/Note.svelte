@@ -14,6 +14,8 @@
   
   let name = '';
   let picture = '';
+  let about = '';
+  let npub = '';
 
   $: documentTitle.subscribe(value => {
     document.title = value;
@@ -113,6 +115,15 @@
     <div class="content">
       {@html renderedContent}
     </div>
+    <h1>About the author</h1>
+      <div class="picture-container">
+        <!-- svelte-ignore a11y-missing-attribute -->
+        <img src="{picture}" /> <a href="https://njump.me/{npub}">{name}</a>
+      </div>
+  </div>
+  
+  <div class="about">
+    {about}
   </div>
   <zap-threads anchor=""/>
 {:else}
