@@ -93,7 +93,7 @@
 </div>
 
 <div class="about">
-  Commentary around Privacy, Security, and Anonymity in the dystopian age.
+  Commentary around Privacy, Security, & Anonymity in the dystopian age.
   Highlighting businesses & services with "trust me bro" security & privacy.
 </div>
 
