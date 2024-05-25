@@ -102,7 +102,7 @@
       <!-- svelte-ignore a11y-missing-attribute -->
       <img src="{picture}" />
     </div>
-    <span>Home &lt; Trust Me Bro</span>
+    <span>Trust Me Bro</span>
   </a>
 </div>
 
