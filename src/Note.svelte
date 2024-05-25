@@ -102,7 +102,7 @@
       <!-- svelte-ignore a11y-missing-attribute -->
       <img src="{picture}" />
     </div>
-    <span>{name} homepage</span>
+    <span>Home &lt; Trust Me Bro</span>
   </a>
 </div>
 
@@ -121,10 +121,10 @@
     <h1>About the author</h1>
       <div class="picture-container">
         <!-- svelte-ignore a11y-missing-attribute -->
-        <img src="{picture}" />
+        <a href="https://njump.me/{npub}"><img src="{picture}" /></a>
       </div>
       <div class="about">
-        <a href="https://njump.me/{npub}">{name}</a>
+        <a href="https://njump.me/{npub}"><strong>{name}</strong></a><br/><br/>
         {about}
       </div>
   </div>
