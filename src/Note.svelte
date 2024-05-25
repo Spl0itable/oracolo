@@ -119,11 +119,12 @@
       <br/><br/>
     </div>
     <h1>About the author</h1>
-      <div class="picture-container" style="float:left;">
+      <div class="picture-container">
         <!-- svelte-ignore a11y-missing-attribute -->
-        <img src="{picture}" /> <a href="https://njump.me/{npub}">{name}</a>
+        <img src="{picture}" />
       </div>
-      <div class="about" style="float:right;">
+      <div class="about">
+        <a href="https://njump.me/{npub}">{name}</a>
         {about}
       </div>
   </div>
