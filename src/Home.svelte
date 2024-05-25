@@ -82,9 +82,6 @@
 <div class="header home">
   <div class="external-link">
     Follow on <a href="https://njump.me/{npub}">Nostr</a><br/><br/>
-    <button data-npub="npub16jdfqgazrkapk0yrqm9rdxlnys7ck39c7zmdzxtxqlmmpxg04r0sd733sv">
-      Zap Me ⚡️
-    </button>
   </div>
   <h1>
     <div class="picture-container">

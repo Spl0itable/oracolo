@@ -123,9 +123,7 @@
         <a href="https://njump.me/{npub}"><img src="{picture}" alt="Author picture" /></a>
       </div>
       <div class="about">
-        <a href="https://njump.me/{npub}"><strong><h3>{name}</h3></strong></a> <button data-npub="npub16jdfqgazrkapk0yrqm9rdxlnys7ck39c7zmdzxtxqlmmpxg04r0sd733sv">
-          Zap Me ⚡️
-        </button>
+        <a href="https://njump.me/{npub}"><strong><h3>{name}</h3></strong></a>
         {about}
       </div>
     </div>

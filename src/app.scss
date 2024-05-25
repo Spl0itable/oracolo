@@ -66,6 +66,10 @@ code {
 .header {
   &.home h1 {
     font-size: 3rem;
+    
+    @media only screen and (max-width: 768px) {
+      font-size: 2rem;
+    }
   }
 
   .external-link {
