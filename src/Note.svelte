@@ -31,6 +31,7 @@
     name = profileContent.name || null;
     picture = profileContent.picture || null;
     about = profileContent.about || null;
+    npub = nip19.npubEncode(publicKey)
     note1 = nip19.noteEncode(id)
 
     const pool = new SimplePool()
@@ -115,18 +116,18 @@
     {/if}
     <div class="content">
       {@html renderedContent}
+      <br/><br/>
     </div>
     <h1>About the author</h1>
-      <div class="picture-container">
+      <div class="picture-container" style="float:left;">
         <!-- svelte-ignore a11y-missing-attribute -->
         <img src="{picture}" /> <a href="https://njump.me/{npub}">{name}</a>
       </div>
+      <div class="about" style="float:right;">
+        {about}
+      </div>
   </div>
-  
-  <div class="about">
-    {about}
-  </div>
-  <zap-threads anchor={note1} />
+  <zap-threads anchor={note1} relays="wss://relay.damus.io,wss://relay.nostr.band,wss://nostr.coinfund.app,wss://nos.lol,wss://relay.mostr.pub" disable="replyAnonymously"/>
 {:else}
   <p>Loading...</p>
 {/if}

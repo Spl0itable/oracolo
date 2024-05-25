@@ -88,12 +88,12 @@
       <!-- svelte-ignore a11y-missing-attribute -->
       <img src="{picture}" />
     </div>
-    Trust Me Bro | Blog
+    Trust Me Bro
   </h1>
 </div>
 
 <div class="about">
-  Commentary around Privacy, Security, and Anonymity in the modern age.
+  Commentary around Privacy, Security, and Anonymity in the digital age.
 </div>
 
 {#if events.length > 0}
