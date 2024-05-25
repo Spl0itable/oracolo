@@ -16,6 +16,7 @@
   let picture = '';
   let about = '';
   let npub = '';
+  let currentUrl;
 
   $: documentTitle.subscribe(value => {
     document.title = value;
@@ -30,6 +31,8 @@
     const profileContent = JSON.parse(profile.content);
     name = profileContent.name || null;
     picture = profileContent.picture || null;
+    about = profileContent.about || null;
+    currentUrl = window.location.href;
     note1 = nip19.noteEncode(id)
 
     const pool = new SimplePool()
@@ -125,7 +128,7 @@
   <div class="about">
     {about}
   </div>
-  <zap-threads anchor=""/>
+  <zap-threads anchor={currentUrl} />
 {:else}
   <p>Loading...</p>
 {/if}

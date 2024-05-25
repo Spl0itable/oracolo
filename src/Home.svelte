@@ -28,11 +28,10 @@
     const parsedContent = JSON.parse(profile.content);
     name = parsedContent.name || null;
     picture = parsedContent.picture || null;
-    about = parsedContent.about || null;
     npub = nip19.npubEncode(publicKey)
     topNotesCount = topNotes;
 
-    documentTitle.set(name + " home, powerd by Nostr");
+    documentTitle.set("Trust Me Bro | Blog powered by Nostr");
 
     const pool = new SimplePool()
     let subscription = pool.subscribeMany(
