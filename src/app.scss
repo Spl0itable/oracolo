@@ -87,11 +87,11 @@ code {
   .picture-container {
     position: relative;
     display: inline-block;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 5.5rem;
+    height: 5.5rem;
     overflow: hidden;
     border-radius: 50%;
-    margin-bottom: -0.25rem;
+    margin-bottom: -1.5rem;
   
   
     img {
@@ -138,7 +138,6 @@ code {
 .about {
   margin-bottom: 2rem;
   padding-bottom: 1rem;
-  border-bottom: 8px solid #ebebeb;
 }
 
 .top-notes {
@@ -289,5 +288,32 @@ h1 {
 
   a {
     color: #cbcbcb;
+  }
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .picture-container {
+    flex-shrink: 0;
+    margin-right: 1rem;
+    max-width: 150px;
+
+    @media only screen and (max-width: 768px) {
+      margin-bottom: 1rem;
+      margin-right: 0;
+    }
+  }
+
+  .about {
+    flex-grow: 1;
   }
 }

@@ -74,9 +74,9 @@
 {/if}
 
 <div class="footer">
-  <p>&copy; {new Date().getFullYear()}&nbsp;All rights reserved • Follow on <a href="https://njump.me/npub16jdfqgazrkapk0yrqm9rdxlnys7ck39c7zmdzxtxqlmmpxg04r0sd733sv" style="text-decoration:underline;">Nostr</a></p><br/><br/>This blog is powered by <a href="https://njump.me">Nostr</a> and based on the <a href="https://github.com/dtonon/oracolo">Oracolo</a> framework<br/><br/>
+  <p>&copy; {new Date().getFullYear()}&nbsp;All rights reserved • Follow on <a href="https://njump.me/npub16jdfqgazrkapk0yrqm9rdxlnys7ck39c7zmdzxtxqlmmpxg04r0sd733sv" style="text-decoration:underline;">Nostr</a></p><br/><br/>Trust Me Bro blog is powered by <a href="https://njump.me">Nostr</a> and based on the <a href="https://github.com/dtonon/oracolo">Oracolo</a> framework<br/><br/>
   {#if setRelays }
-    This site connects to these Nostr relays to retrieve blog posts: {setRelays.join(', ')}
+    Nostr relays used to retrieve blog posts: {setRelays.join(', ')}
   {/if}
   <script type="text/javascript" src="https://unpkg.com/zapthreads/dist/zapthreads.iife.js"></script>
 </div>

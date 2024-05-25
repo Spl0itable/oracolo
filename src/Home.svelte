@@ -81,19 +81,20 @@
 
 <div class="header home">
   <div class="external-link">
-    Profile: <a href="https://njump.me/{npub}">{npub.slice(0, 9) + "..." + npub.slice(-5)}</a>
+    Follow on <a href="https://njump.me/{npub}">Nostr</a>
   </div>
   <h1>
     <div class="picture-container">
       <!-- svelte-ignore a11y-missing-attribute -->
-      <img src="{picture}" />
+      <img src="TMB-icon.png" />
     </div>
     Trust Me Bro
   </h1>
 </div>
 
 <div class="about">
-  Commentary around Privacy, Security, and Anonymity in the digital age.
+  Commentary around Privacy, Security, and Anonymity in the dystopian age.
+  Highlighting businesses & services with "trust me bro" security & privacy.
 </div>
 
 {#if events.length > 0}

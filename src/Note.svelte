@@ -100,7 +100,7 @@
   <a href="#">
     <div class="picture-container">
       <!-- svelte-ignore a11y-missing-attribute -->
-      <img src="{picture}" />
+      <img src="TMB-icon.png" />
     </div>
     <span>Trust Me Bro</span>
   </a>
@@ -117,17 +117,19 @@
     <div class="content">
       {@html renderedContent}
       <br/><br/>
-    </div>
-    <h1>About the author</h1>
+      <h2>About the author</h2>
+    <div class="author-info">
       <div class="picture-container">
-        <!-- svelte-ignore a11y-missing-attribute -->
-        <a href="https://njump.me/{npub}"><img src="{picture}" /></a>
+        <a href="https://njump.me/{npub}"><img src="{picture}" alt="Author picture" /></a>
       </div>
       <div class="about">
-        <a href="https://njump.me/{npub}"><strong>{name}</strong></a><br/><br/>
+        <a href="https://njump.me/{npub}"><strong><h3>{name}</h3></strong></a>
         {about}
       </div>
+    </div>
+    </div>
   </div>
+  <h2>Comments</h2>
   <zap-threads anchor={note1} relays="wss://relay.damus.io,wss://relay.nostr.band,wss://nostr.coinfund.app,wss://nos.lol,wss://relay.mostr.pub" disable="replyAnonymously"/>
 {:else}
   <p>Loading...</p>
