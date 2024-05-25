@@ -12,22 +12,22 @@
         <link rel="icon" href="TMB-icon.png" sizes="32x32" />
         <link rel="icon" href="TMB-icon.png" sizes="192x192" />
         <link rel="apple-touch-icon" href="TMB-icon.png" />
-        <link rel="canonical" href="https://trustmebro.blog" id="canonical-link" />
+        <link rel="canonical" href="" id="canonical-link" />
         <meta name="msapplication-TileImage" content="TMB-icon.png" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:site_name" content="Trust Me Bro | Blog powered by Nostr" />
-        <meta property="og:title" content="Commentary around Privacy, Security, and Anonymity in the dystopian age." id="dynamic-og-title" />
+        <meta property="og:title" content="" id="dynamic-og-title" />
         <meta property="og:url" content="" id="dynamic-og-url" />
         <meta property="og:type" content="article" />
-        <meta property="og:description" content="Highlighting businesses & services &quot;trust me bro&quot; security & privacy." />
-        <meta property="og:image" content="https://trustmebro.blog/TMB-og.jpg" id="dynamic-og-image" />
-        <meta property="og:image:url" content="https://trustmebro.blog/TMB-og.jpg" id="dynamic-og-image-url" />
-        <meta property="og:image:secure_url" content="https://trustmebro.blog/TMB-og.jpg" id="dynamic-og-image-secure-url" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" id="dynamic-og-image" />
+        <meta property="og:image:url" content="" id="dynamic-og-image-url" />
+        <meta property="og:image:secure_url" content="" id="dynamic-og-image-secure-url" />
         <meta property="article:publisher" content="https://www.facebook.com/CoinFund" />
-        <meta name="twitter:title" content="Commentary around Privacy, Security, and Anonymity in the dystopian age." />
+        <meta name="twitter:title" content="" />
         <meta name="twitter:url" content="" />
-        <meta name="twitter:description" content="Highlighting businesses & services &quot;trust me bro&quot; security & privacy." />
-        <meta name="twitter:image" content="https://trustmebro.blog/TMB-og.jpg" />
+        <meta name="twitter:description" content="" />
+        <meta name="twitter:image" content="" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@Spl0itable" />
   </head>
@@ -40,17 +40,22 @@
       document.title = title;
       document.getElementById("dynamic-og-title").setAttribute("content", title);
       document.querySelector("meta[name='twitter:title']").setAttribute("content", title);
-      
+  
       document.getElementById("dynamic-og-url").setAttribute("content", window.location.href);
       document.querySelector("meta[name='twitter:url']").setAttribute("content", window.location.href);
-      
+  
       document.querySelector("meta[property='og:description']").setAttribute("content", description);
       document.querySelector("meta[name='twitter:description']").setAttribute("content", description);
-      
+  
       document.getElementById("dynamic-og-image").setAttribute("content", imageUrl);
       document.getElementById("dynamic-og-image-url").setAttribute("content", imageUrl);
       document.getElementById("dynamic-og-image-secure-url").setAttribute("content", imageUrl);
       document.querySelector("meta[name='twitter:image']").setAttribute("content", imageUrl);
+    }
+  
+    function updateCanonicalLink() {
+      const canonicalLink = document.getElementById("canonical-link");
+      canonicalLink.setAttribute("href", window.location.href);
     }
   
     function extractAndUpdateMetaTags() {
@@ -61,6 +66,7 @@
         const imageElement = noteWrapper?.querySelector("img.note-banner");
         const imageUrl = imageElement?.src || "https://trustmebro.blog/TMB-og.jpg";
         updateMetaTags(title, description, imageUrl);
+        updateCanonicalLink();
       } else {
         // Reset to default values when on the home page or other non-note pages
         updateMetaTags(
@@ -68,6 +74,7 @@
           "Highlighting businesses & services \"trust me bro\" security & privacy.",
           "https://trustmebro.blog/TMB-og.jpg"
         );
+        updateCanonicalLink();
       }
     }
   

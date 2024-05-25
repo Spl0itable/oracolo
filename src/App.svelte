@@ -79,4 +79,5 @@
     Nostr relays used to retrieve blog posts: {setRelays.join(', ')}
   {/if}
   <script type="text/javascript" src="https://unpkg.com/zapthreads/dist/zapthreads.iife.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/nostr-zap@0.22.0"></script>
 </div>

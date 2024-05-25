@@ -123,7 +123,9 @@
         <a href="https://njump.me/{npub}"><img src="{picture}" alt="Author picture" /></a>
       </div>
       <div class="about">
-        <a href="https://njump.me/{npub}"><strong><h3>{name}</h3></strong></a>
+        <a href="https://njump.me/{npub}"><strong><h3>{name}</h3></strong></a> <button data-npub="npub16jdfqgazrkapk0yrqm9rdxlnys7ck39c7zmdzxtxqlmmpxg04r0sd733sv">
+          Zap Me ⚡️
+        </button>
         {about}
       </div>
     </div>
@@ -132,5 +134,8 @@
   <h2>Comments</h2>
   <zap-threads anchor={note1} relays="wss://relay.damus.io,wss://relay.nostr.band,wss://nostr.coinfund.app,wss://nos.lol,wss://relay.mostr.pub" disable="replyAnonymously"/>
 {:else}
+<div class="loading-container" style="margin-top:5rem;">
+  <img src="TMB-icon.png" alt="Loading icon" class="loading-icon" />
   <p>Loading...</p>
+</div>
 {/if}

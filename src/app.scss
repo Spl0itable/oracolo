@@ -317,3 +317,29 @@ h1 {
     flex-grow: 1;
   }
 }
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 200px;
+}
+
+.loading-icon {
+  opacity: 0.25;
+  width: 150px;
+  height: 150px;
+  animation: spin 2s linear infinite;
+  filter: grayscale(100%);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
