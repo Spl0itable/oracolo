@@ -16,7 +16,6 @@
   let picture = '';
   let about = '';
   let npub = '';
-  let currentUrl;
 
   $: documentTitle.subscribe(value => {
     document.title = value;
@@ -32,8 +31,7 @@
     name = profileContent.name || null;
     picture = profileContent.picture || null;
     about = profileContent.about || null;
-    currentUrl = window.location.href;
-    note1 = nip19.noteEncode(id) + '/' + encodeURIComponent(title.toLowerCase().replace(/\s+/g, '-'));
+    note1 = nip19.noteEncode(id)
 
     const pool = new SimplePool()
     let subscription = pool.subscribeMany(
@@ -128,7 +126,7 @@
   <div class="about">
     {about}
   </div>
-  <zap-threads anchor={currentUrl} />
+  <zap-threads anchor={note1} />
 {:else}
   <p>Loading...</p>
 {/if}
