@@ -10,7 +10,6 @@
 
   let name = '';
   let picture = '';
-  let about = '';
   let npub = '';
 
   let topNotesCount = 0;
@@ -102,7 +101,7 @@
     <div class="top-notes">
         {#each topEvents as event}
           <div class="note">
-            <a href={`#${event.id}`}>
+            <a href={`#${event.id}/${encodeURIComponent(event.title.toLowerCase().replace(/\s+/g, '-'))}`}>
               <!-- svelte-ignore a11y-missing-attribute -->
               <img src="{event.image}" />
               <div class="title">{event.title}</div>
@@ -121,7 +120,7 @@
         <ul>
           {#each listingEvents as event}
             <li>
-              <a href={`#${event.id}`}>{event.title}</a>
+              <a href={`#${event.id}/${encodeURIComponent(event.title.toLowerCase().replace(/\s+/g, '-'))}`}>{event.title}</a>
               {#if event.summary }
                 <div class="summary">{event.summary}</div>
               {/if}

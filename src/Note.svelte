@@ -33,7 +33,7 @@
     picture = profileContent.picture || null;
     about = profileContent.about || null;
     currentUrl = window.location.href;
-    note1 = nip19.noteEncode(id)
+    note1 = nip19.noteEncode(id) + '/' + encodeURIComponent(title.toLowerCase().replace(/\s+/g, '-'));
 
     const pool = new SimplePool()
     let subscription = pool.subscribeMany(

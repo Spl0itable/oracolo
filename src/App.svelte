@@ -13,11 +13,12 @@
   let setRelays;
 
   const handleHashChange = () => {
-    const newHash = window.location.hash.substr(1); // Remove the leading #
-    if (newHash !== currentHash) {
-      currentHash = newHash;
-    }
-  };
+  const newHash = window.location.hash.substr(1); // Remove the leading #
+  const [eventId, eventTitle] = newHash.split('/');
+  if (eventId !== currentHash) {
+    currentHash = eventId;
+  }
+};
 
   onMount(async () => {
     const { publicKey, relays } = getConfig();
